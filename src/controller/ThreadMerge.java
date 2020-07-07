@@ -13,8 +13,8 @@ public class ThreadMerge extends Thread {
 		try {
 			mergeSort(this.vetor, 0, 99);
 
-		} catch (Exception e) {
-			// TODO: handle exception
+		} 
+		catch (Exception e) {
 		}
 		showVetor();
 		this.fim=(int) System.nanoTime();
