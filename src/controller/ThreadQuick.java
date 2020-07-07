@@ -1,4 +1,5 @@
 package controller;
+
 public class ThreadQuick extends Thread {
 	private int vetor[] = new int[100];
 	private int inicial;
@@ -7,19 +8,17 @@ public class ThreadQuick extends Thread {
 	public ThreadQuick(int vetor[]) {
 		this.vetor = vetor;
 	}
-
+	
 	public void run() {
 		this.inicial=(int) System.nanoTime();	
-		/* mergeSort(this.vetor,0,100); */
 		try {
 			quickSort(this.vetor, 0, 99);
-		} catch (Exception e) {
-			// TODO: handle exception
+		} 
+		catch (Exception e) {
 		}
 		showVetor();
 		this.fim=(int) System.nanoTime();
-		System.out.println("Tempo Final da QuickSort em nano segundos :"+(this.fim-this.inicial));			
-		
+		System.out.println("Tempo Final da QuickSort em nano segundos :"+(this.fim-this.inicial));	
 	}
 
 	private void quickSort(int[] vetor, int esquerda, int direita) {
